@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void calcularEdad( int anioAct , int mesAct, int fechAct, int anioNac, int mesNac, int fechNac)
+void Edad( int anioAct , int mesAct, int fechAct, int anioNac, int mesNac, int fechNac)
 {
     int respFech , respMes;
 
@@ -23,7 +23,7 @@ void calcularEdad( int anioAct , int mesAct, int fechAct, int anioNac, int mesNa
     else
         respMes = mesAct - mesNac;
 
-    cout << "\nTienes "<< anioAct - anioNac <<" años " <<respMes <<" meses y "<<respFech <<" dias." ;
+    cout << "\nTienes "<< anioAct - anioNac <<" aÃ±os " <<respMes <<" meses y "<<respFech <<" dias." ;
 }
 
 int main ()
@@ -36,30 +36,18 @@ int main ()
     int mesNac;
     int fechNac;
     int a = 0;
-
-    cout << "Programa que calcula la Edad, Mes y Dia";
-    cout << "\nEscuela Profesional de Ingenieria de Sistemas\n\n";
-    while (a == 0)
-    {
         cout << "Ingrese Mes Actual: ";
         cin >> mesAct;
         cout << "Ingrese Fecha Actual: ";
         cin >> fechAct;
 
-        cout << "\nIngrese Año Nacimiento: ";
+        cout << "\nNacimiento: ";
         cin >> anioNac;
         cout << "Ingrese Mes de Nacimiento: ";
         cin >> mesNac;
         cout << "Ingrese Fecha de Nacimiento: ";
         cin >> fechNac;
 
-        calcularEdad( anioAct , mesAct, fechAct, anioNac, mesNac, fechNac);
-        cout << "\nPara finalizar el progrma ingrese 1\n";
-        cout << "Para continuar ingrese 0:";
-        cin >> a;
+        Edad( anioAct , mesAct, fechAct, anioNac, mesNac, fechNac);
+        return 0;
     }
-
-
-
-    return 0;
-}
